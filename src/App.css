@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  /* overflow-x: scroll; */
+  font-family: 'Bebas Neue', cursive !important;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h1:hover {
+  cursor: default;
+}
+
+h2:hover {
+  cursor: default;
+}
+
+h3:hover {
+  cursor: default;
+}
+
+h5:hover {
+  cursor: default;
+}
+
+p:hover {
+  cursor: default;
+}
+
+/*  */
+.Top {
+  position: fixed;
+  background-color: lightcoral;
+  top: 25px;
+  left: 40px;
+}
+
+.Gauche {
+  position: fixed;
+  background-color: lightblue;
+  top: 100px;
+  left: 40px;
+}
+
+.Droite {
+  background-color: lightsalmon;
+  min-height: 100vh;
+  margin-left: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Bottom {
+  position: fixed;
+  background-color: lightgreen;
+  bottom: 200px;
+  left: 40px;
+}
+
+@media only screen and (max-width: 720px) {
+  .Top {
+    position: sticky;
+    background-color: lightcoral;
+    top: 25px;
+    text-align: center;
+    min-width: 100vw;
+    left: 0;
+  }
+  .Top-Menu {
+    position: sticky;
+    background-color: lightcoral;
+    text-align: center;
+    min-width: 100vw;
+  }
+  .Gauche {
+    display: none;
+  }
+  .Droite {
+    background-color: lightsalmon;
+    min-height: 100vh;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Bottom {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .Top-Menu {
+    display: none;
+  }
+}
