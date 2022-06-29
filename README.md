@@ -4,9 +4,7 @@
 </h2>
 <br/>
 
-## Fait avec
-
-Portfolio de Maxime Turpault <a href="http://maximeturpault.benit.fr/" target="_blank">maximeturpault.benit.fr</a>
+## Fait avec et par
 
 Mon Portfolio -> <a href="http://benit.fr/" target="_blank">benit.fr</a>
 
