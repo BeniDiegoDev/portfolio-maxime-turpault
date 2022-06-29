@@ -1,12 +1,12 @@
 <h2 align="center">
   Portfolio v1.0<br/>
-  Demo -> <a href="http://maximeturpault.benit.fr/" target="_blank">maximeturpault.benit.fr</a>
+  Demo -> <a href="https://maximeturpault.benit.fr/" target="_blank">maximeturpault.benit.fr</a>
 </h2>
 <br/>
 
 ## Fait avec et par
 
-Mon Portfolio -> <a href="http://benit.fr/" target="_blank">benit.fr</a>
+Mon Portfolio -> <a href="https://benit.fr/" target="_blank">benit.fr</a>
 
 Ce projet a été construit en utilisant ces technologies :
 
