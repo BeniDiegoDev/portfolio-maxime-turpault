@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.css';
 
 import SmartBar from "./components/SmartBar";
@@ -13,9 +13,6 @@ function App() {
       <Menu />
       <div className="Droite">
         <h3>Photo</h3>
-      </div>
-      <div className="Droite">
-        <h3>Photo2</h3>
       </div>
       <Contact />
     </>
