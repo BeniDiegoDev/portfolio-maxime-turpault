@@ -2,26 +2,53 @@ import React, { useState } from 'react'
 import './App.css';
 
 function App() {
-  
+
   const [showMenu, setShowMenu] = useState(false)
+
+  const Categories = [
+    { name: 'Accueil' },
+    { name: 'Présentation' },
+    { name: 'Architectures' },
+    { name: 'Paysages' },
+    { name: 'Portraits' },
+    { name: 'Contact' },
+  ]
 
   return (
     <>
-      <div className="Top-Menu">
-        <h2 onClick={() => (setShowMenu(!showMenu))}>Menu</h2>
+      <div className="Smart-Bar">
+        <div className="Top-Menu">
+          <h2 onClick={() => (setShowMenu(!showMenu))}>Menu</h2>
+        </div>
+        {showMenu ?
+          <div className="Top-Smart">
+            {Categories.map((item, i) => (
+              <h3>{item.name}</h3>
+            )
+            )}
+          </div>
+          :
+          <>
+          </>
+        }
+        <div className="Mark-Smart">
+          <h1>Maxime Turpault</h1>
+        </div>
       </div>
-      <div className="Top">
+      <div className="Mark">
         <h1>Maxime Turpault</h1>
       </div>
       <div className="Gauche">
-        <h2>Accueil</h2>
-        <h2>Portrait</h2>
-        <h2>Paysage</h2>
-        <h2>Biographie</h2>
-        <h2>Contact</h2>
+        {Categories.map((item, i) => (
+          <h3>{item.name}</h3>
+        )
+        )}
       </div>
       <div className="Droite">
-        <h2>Photo</h2>
+        <h3>Photo</h3>
+      </div>
+      <div className="Droite">
+        <h3>Photo2</h3>
       </div>
       <div className="Bottom">
         <h2>Contact</h2>
