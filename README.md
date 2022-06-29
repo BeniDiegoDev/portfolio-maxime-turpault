@@ -1,12 +1,12 @@
 <h2 align="center">
   Portfolio v1.0<br/>
-  Demo -> <a href="http://maximeturpault.benit.fr/" target="_blank">maximeuturpault.benit.fr</a>
+  Demo -> <a href="http://maximeturpault.benit.fr/" target="_blank">maximeturpault.benit.fr</a>
 </h2>
 <br/>
 
 ## Fait avec
 
-Portfolio de Maxime Turpault <a href="http://maximeturpault.benit.fr/" target="_blank">maximeuturpault.benit.fr</a>
+Portfolio de Maxime Turpault <a href="http://maximeturpault.benit.fr/" target="_blank">maximeturpault.benit.fr</a>
 
 Mon Portfolio -> <a href="http://benit.fr/" target="_blank">benit.fr</a>
 
