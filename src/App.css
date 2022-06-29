@@ -69,6 +69,8 @@ p:hover {
   position: fixed;
   top: 100px;
   left: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .Droite {
@@ -83,6 +85,13 @@ p:hover {
   position: fixed;
   bottom: 200px;
   left: 40px;
+}
+
+.Item-Menu {
+  color: black;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
 }
 
 @media only screen and (max-width: 720px) {
@@ -129,6 +138,12 @@ p:hover {
     background-color: white;
     padding-bottom: 10px;
     padding-top: 10px;
+  }
+  .Item-Smart {
+    color: black;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.3rem;
   }
 }
 

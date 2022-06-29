@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../App.css';
+import {Link} from 'react-router-dom';
 
 import Categories from "./Categories";
 
@@ -15,7 +15,7 @@ function SmartBar() {
             {showMenu ?
                 <div className="Top-Smart">
                     {Categories.map((item, i) => (
-                        <h3>{item.name}</h3>
+                        <Link className="Item-Smart" key={i} to={item.link}>{item.name}</Link>
                     )
                     )}
                 </div>

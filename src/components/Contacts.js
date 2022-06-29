@@ -1,7 +1,6 @@
 import React from 'react'
-import '../App.css';
 
-function Contact() {
+function Contacts() {
 
     return (
         <div className="Bottom">
@@ -10,4 +9,4 @@ function Contact() {
     );
 }
 
-export default Contact;
+export default Contacts;

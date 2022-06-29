@@ -1,5 +1,5 @@
 import React from 'react'
-import '../App.css';
+import {Link} from 'react-router-dom';
 
 import Categories from "./Categories";
 
@@ -12,7 +12,7 @@ function Menu() {
             </div>
             <div className="Gauche">
                 {Categories.map((item, i) => (
-                    <h3>{item.name}</h3>
+                    <Link className="Item-Menu" key={i} to={item.link}>{item.name}</Link>
                 )
                 )}
             </div>
