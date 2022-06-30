@@ -24,7 +24,7 @@ function SmartBar() {
                 </>
             }
             <div className="Mark-Smart">
-                <Link className="Smart-Name" to="/">Maxime Turpault</Link><img className='Logo' src='./logomt.png' alt='logo'/>
+                <Link className="Smart-Name" to="/">Maxime Turpault</Link><img className='Logo' src='/logomt.png' alt='logo'/>
             </div>
         </div>
     );
