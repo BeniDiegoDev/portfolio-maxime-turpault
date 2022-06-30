@@ -36,6 +36,7 @@ h3 {
   margin-top: 0px;
   margin-bottom: 0px;
   font-family: 'Barlow Condensed', sans-serif;
+  font-weight: bold;
 }
 
 h1:hover {
@@ -65,6 +66,14 @@ p:hover {
   left: 40px;
 }
 
+.Name {
+  color: black;
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .Gauche {
   position: fixed;
   top: 100px;
@@ -83,8 +92,17 @@ p:hover {
 
 .Bottom {
   position: fixed;
-  bottom: 200px;
-  left: 40px;
+  bottom: 40px;
+  left: 37px;
+}
+
+.Contact-Logo{
+  color: black;
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 3px;
 }
 
 .Item-Menu {
@@ -92,6 +110,71 @@ p:hover {
   text-decoration: none;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.Bottom-B {
+  width: 100vw;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0px;
+}
+
+.Bottom-Bar {
+  width: 95%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.BottomL {
+  min-width: 200px; 
+  max-width: 200px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.BottomM {
+  min-width: 200px;
+  max-width: 200px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.BottomR {
+  min-width: 200px;
+  max-width: 200px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Contact-Bottom{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 @media only screen and (max-width: 720px) {
@@ -114,6 +197,8 @@ p:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   .Mark-Smart {
     text-align: center;
@@ -131,19 +216,42 @@ p:hover {
   }
   .Bottom {
     position: fixed;
-    bottom: 0px;
+    bottom: 35px;
     left: 0px;
     width: 100vw;
     text-align: center;
     background-color: white;
-    padding-bottom: 10px;
-    padding-top: 10px;
   }
   .Item-Smart {
     color: black;
     text-decoration: none;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .Smart-Name {
+    color: black;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .Bottom-B {
+    position: fixed;
+    bottom: 0px;
+  }
+  .BottomL {
+    display: none;
+  }
+  .BottomM {
+    justify-content: flex-start;
+    min-width: 150px;
+    max-width: 150px;
+  }
+  .BottomR {
+    justify-content: flex-end;
+    min-width: 150px;
+    max-width: 150px;
   }
 }
 

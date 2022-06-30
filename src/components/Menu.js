@@ -8,7 +8,7 @@ function Menu() {
     return (
         <div>
             <div className="Mark">
-                <h1>Maxime Turpault</h1>
+                <Link className="Name" to="/">Maxime Turpault</Link>
             </div>
             <div className="Gauche">
                 {Categories.map((item, i) => (
