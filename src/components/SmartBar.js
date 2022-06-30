@@ -10,7 +10,7 @@ function SmartBar() {
     return (
         <div className="Smart-Bar">
             <div className="Top-Menu">
-                <h2 onClick={() => (setShowMenu(!showMenu))}>Menu</h2>
+                <h2 onClick={() => (setShowMenu(!showMenu))}><span  className="Text-Menu">Menu</span></h2>
             </div>
             {showMenu ?
                 <div className="Top-Smart">
@@ -24,7 +24,7 @@ function SmartBar() {
                 </>
             }
             <div className="Mark-Smart">
-                <Link className="Smart-Name" to="/">Maxime Turpault</Link>
+                <Link className="Smart-Name" to="/">Maxime Turpault</Link><img className='Logo' src='./logomt.png' alt='logo'/>
             </div>
         </div>
     );
