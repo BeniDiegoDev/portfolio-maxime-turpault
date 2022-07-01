@@ -8,7 +8,10 @@ function Menu() {
     return (
         <div>
             <div className="Mark">
-                <Link className="Name" to="/">Maxime Turpault</Link><img className='Logo' src='/logomt.png' alt='logo'/>
+                <Link className="Name" to="/">Maxime Turpault</Link>
+            </div>
+            <div className="Mark-Logo">
+                <img className='Logo' src='/logomt.png' alt='logo'/>
             </div>
             <div className="Gauche">
                 {Categories.map((item, i) => (

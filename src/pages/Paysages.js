@@ -4,6 +4,7 @@ import SmartBar from '../components/SmartBar';
 import Menu from '../components/Menu';
 import Contacts from '../components/Contacts'
 import BottomBar from '../components/BottomBar';
+import PaysagesPictures from '../components/PaysagesPictures';
 
 function Paysages() {
 
@@ -11,8 +12,11 @@ function Paysages() {
     <>
       <SmartBar />
       <Menu />
-      <div className="Droite">
-        <h3>Paysages</h3>
+      <div className='Pictures-Galerie'>
+        {PaysagesPictures.map((item, i) => (
+          <img className="Paysages-Pictures" key={i} src={item.miniatures} alt={item.name} />
+        )
+        )}
       </div>
       <Contacts />
       <BottomBar />

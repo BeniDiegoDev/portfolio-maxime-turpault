@@ -4,6 +4,7 @@ import SmartBar from '../components/SmartBar';
 import Menu from '../components/Menu';
 import Contacts from '../components/Contacts'
 import BottomBar from '../components/BottomBar';
+import ArchitecturesPictures from '../components/ArchitecturesPictures';
 
 function Architectures() {
 
@@ -11,8 +12,11 @@ function Architectures() {
     <>
       <SmartBar />
       <Menu />
-      <div className="Droite">
-        <h3>Architectures</h3>
+      <div className='Pictures-Galerie'>
+        {ArchitecturesPictures.map((item, i) => (
+          <img className="Architectures-Pictures" key={i} src={item.miniatures} alt={item.name} />
+        )
+        )}
       </div>
       <Contacts />
       <BottomBar />
