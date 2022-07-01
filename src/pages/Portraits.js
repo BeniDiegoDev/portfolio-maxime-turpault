@@ -8,13 +8,10 @@ import Photos from '../components/Photos';
 
 function Portraits() {
 
-  let photoPortraits = Photos.map((item, i) => {
-    if (item.categorie === 'Portraits') {
-      return (
-        <img className="Portraits-Pictures" key={i} src={item.miniatures} alt={item.name} />
-      )
-    }
-  })
+  let photoPortraits = Photos.filter(item => item.categorie === 'Portraits').map((item, i) => (
+    <img className="Pictures" key={i} src={item.miniatures} alt={item.name} />
+  )
+  )
 
   return (
     <>

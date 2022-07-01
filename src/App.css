@@ -185,7 +185,7 @@ p:hover {
 .Pictures-Galerie {
   margin-left: 240px;
   margin-right: 130px;
-  margin-top: 90px;
+  margin-top: 5vh;
   padding-bottom: 50px;
   display: flex;
   justify-content: center;
@@ -299,19 +299,7 @@ p:hover {
   flex-wrap: wrap;
 }
 
-.Architectures-Pictures {
-  width: 32%;
-  max-height: 32%;
-  margin: 2px;
-}
-
-.Portraits-Pictures {
-  width: 32%;
-  max-height: 32%;
-  margin: 2px;
-}
-
-.Paysages-Pictures {
+.Pictures {
   width: 32%;
   max-height: 32%;
   margin: 2px;
@@ -480,19 +468,7 @@ p:hover {
     max-width: 50px;
   }
 
-  .Architectures-Pictures {
-    width: 80%;
-    max-height: 80%;
-    margin: 2px;
-  }
-
-  .Portraits-Pictures {
-    width: 80%;
-    max-height: 80%;
-    margin: 2px;
-  }
-
-  .Paysages-Pictures {
+  .Pictures {
     width: 80%;
     max-height: 80%;
     margin: 2px;
