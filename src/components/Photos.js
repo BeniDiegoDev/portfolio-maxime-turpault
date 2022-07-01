@@ -21,6 +21,7 @@ const Photos = [
     { categorie: 'Portraits', name: 'Surveillant A', img: 'https://res.cloudinary.com/dktfcexev/image/upload/v1656696129/Portfolio%20Maxime%20Turpault/Portraits/Surveillant.a_je6q4q.jpg', miniatures: 'https://res.cloudinary.com/dktfcexev/image/upload/v1656696981/Portfolio%20Maxime%20Turpault/Portraits/Miniatures/Surveillant.a_kwjiui.jpg' },
     { categorie: 'Portraits', name: 'Surveillant B', img: 'https://res.cloudinary.com/dktfcexev/image/upload/v1656696129/Portfolio%20Maxime%20Turpault/Portraits/Surveillant.b_j398hx.jpg', miniatures: 'https://res.cloudinary.com/dktfcexev/image/upload/v1656696981/Portfolio%20Maxime%20Turpault/Portraits/Miniatures/Surveillant.c_lgk9bg.jpg' },
     { categorie: 'Portraits', name: 'Surveillant C', img: 'https://res.cloudinary.com/dktfcexev/image/upload/v1656696129/Portfolio%20Maxime%20Turpault/Portraits/Surveillant.c_amuqww.jpg', miniatures: 'https://res.cloudinary.com/dktfcexev/image/upload/v1656696981/Portfolio%20Maxime%20Turpault/Portraits/Miniatures/Surveillant.b_zgrhfv.jpg' },
+    { categorie: 'Presentation', name: 'Maxime Turpault', img: 'https://res.cloudinary.com/dktfcexev/image/upload/v1656714390/Portfolio%20Maxime%20Turpault/Pr%C3%A9sentation/DSC_9706_rwfr3d.jpg', miniatures: 'https://res.cloudinary.com/dktfcexev/image/upload/v1656714403/Portfolio%20Maxime%20Turpault/Pr%C3%A9sentation/Miniature/DSC_9706_oipomz.jpg' },
 ]
 
 export default Photos;

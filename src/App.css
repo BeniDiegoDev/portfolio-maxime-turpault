@@ -142,6 +142,43 @@ p:hover {
   max-height: 90vh;
 }
 
+.Presentation {
+  margin-left: 240px;
+  margin-right: 130px;
+  margin-top: 5vh;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Presentation-Picture {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Presentation-Pictures {
+  height: 400px;
+}
+
+.Presentation-Parcours {
+  width: 40%;
+  margin-left: 15px;
+}
+
+.Presentation-Desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+.Presentation-Text {
+  width: 80%;
+}
+
 .Contact {
   max-width: 80vw;
   margin-left: 240px;
@@ -380,11 +417,59 @@ p:hover {
     justify-content: center;
     align-items: center;
   }
-    
+
   .Accueil-Pictures {
     max-width: 90vw;
     max-height: 65vh;
   }
+
+  .Presentation {
+    max-width: 100vw;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-top: 140px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Presentation-Picture {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Presentation-Pictures {
+    width: 80%;
+    height: auto;
+  }
+
+  .Presentation-Parcours {
+    width: 80%;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .Presentation-Desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .Presentation-Text {
+    margin-top: 0px;
+    width: 80%;
+  }
+
 
   .Pictures-Galerie {
     margin-left: 0px;
@@ -406,14 +491,14 @@ p:hover {
     align-items: center;
     flex-wrap: wrap;
   }
-  
+
   .Contact-Gauche {
     min-width: 80%;
     max-width: 80%;
     display: flex;
     flex-direction: column;
   }
-  
+
   .Contact-Droite {
     min-width: 80%;
     max-width: 80%;
