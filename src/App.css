@@ -155,16 +155,16 @@ p:hover {
 }
 
 .Contact-Gauche {
-  min-width: 300px;
-  max-width: 300px;
+  min-width: 350px;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
 .Contact-Droite {
-  min-width: 300px;
-  max-width: 300px;
+  min-width: 350px;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -420,15 +420,15 @@ p:hover {
   }
   
   .Contact-Gauche {
-    min-width: 70%;
-    max-width: 70%;
+    min-width: 80%;
+    max-width: 80%;
     display: flex;
     flex-direction: column;
   }
   
   .Contact-Droite {
-    min-width: 70%;
-    max-width: 70%;
+    min-width: 80%;
+    max-width: 80%;
     display: flex;
     flex-direction: column;
   }
