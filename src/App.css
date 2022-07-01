@@ -127,18 +127,19 @@ p:hover {
 
 .Accueil {
   max-width: 80vw;
-  max-height: 75vh;
+  max-height: 80vh;
   margin-left: 240px;
   margin-right: 130px;
   margin-top: 90px;
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .Accueil-Pictures {
-  max-width: 50vw;
-  max-height: 70vh;
+  max-width: 55vw;
+  max-height: 80vh;
 }
 
 .Contact {
@@ -212,15 +213,19 @@ p:hover {
   text-decoration: none;
   font-family: 'Bebas Neue', cursive;
   font-size: 1.3rem;
-  margin: 3px;
+  margin-left: 5px;
 }
 
 .Item-Menu {
-  color: black;
+  color: rgb(110, 110, 110);
   text-decoration: none;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+.Item-Menu:hover {
+  color: black;
 }
 
 .Bottom-B {
