@@ -8,16 +8,14 @@ import Photos from '../components/Photos';
 
 function Accueil() {
 
-  const pictures = Photos
-
-  let viewPict = pictures[Math.floor(Math.random(pictures.length) * pictures.length)]
+  let photoAleatoire = Photos[Math.floor(Math.random(Photos.length) * Photos.length)]
 
   return (
     <>
       <SmartBar />
       <Menu />
       <div className="Accueil">
-          <img className="Accueil-Pictures" src={viewPict.miniatures} alt={viewPict.name} />
+          <img className="Accueil-Pictures" src={photoAleatoire.miniatures} alt={photoAleatoire.name} />
         </div>
       <Contacts />
       <BottomBar />
