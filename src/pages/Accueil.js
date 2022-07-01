@@ -4,11 +4,11 @@ import SmartBar from '../components/SmartBar';
 import Menu from '../components/Menu';
 import Contacts from '../components/Contacts'
 import BottomBar from '../components/BottomBar';
-import AccueilPictures from '../components/AccueilPictures';
+import Photos from '../components/Photos';
 
 function Accueil() {
 
-  const pictures = AccueilPictures
+  const pictures = Photos
 
   let viewPict = pictures[Math.floor(Math.random(pictures.length) * pictures.length)]
 
