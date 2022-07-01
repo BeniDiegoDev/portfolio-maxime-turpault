@@ -4,16 +4,21 @@ import SmartBar from '../components/SmartBar';
 import Menu from '../components/Menu';
 import Contacts from '../components/Contacts'
 import BottomBar from '../components/BottomBar';
+import AccueilPictures from '../components/AccueilPictures';
 
 function Accueil() {
+
+  const pictures = AccueilPictures
+
+  let viewPict = pictures[Math.floor(Math.random(pictures.length) * pictures.length)]
 
   return (
     <>
       <SmartBar />
       <Menu />
       <div className="Accueil">
-          <img className="Accueil-Pictures" src='https://res.cloudinary.com/dktfcexev/image/upload/v1656697225/Portfolio%20Maxime%20Turpault/Paysages/Miniatures/Mar%C3%A9e_basse_fuhqrz.jpg' alt='name' />
-      </div>
+          <img className="Accueil-Pictures" src={viewPict.miniatures} alt={viewPict.name} />
+        </div>
       <Contacts />
       <BottomBar />
     </>
