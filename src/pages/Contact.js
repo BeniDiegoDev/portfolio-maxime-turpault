@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 import { FaInstagram } from 'react-icons/fa';
 import { HiOutlineMail, HiPhone } from 'react-icons/hi';
@@ -10,6 +11,19 @@ import Menu from '../components/Menu';
 import BottomBar from '../components/BottomBar';
 
 function Contact() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_y9l5w4i', 'template_zw64o3s', form.current, 'oR8C9eyUmiYFgWCQt')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   return (
     <>
@@ -26,7 +40,7 @@ function Contact() {
         </div>
       </div>
       <div className="Contact-Form">
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="Form-Group">
               <label className="Form-Label" >Prénom :</label>
               <input type="text" className="Form-Input" name="firstname" placeholder="Prénom" />
@@ -45,7 +59,7 @@ function Contact() {
             </div>
             <div className="Form-Group">
               <label className="Form-Label" >Objet :</label>
-              <input type="text" className="Form-Input" name="object" placeholder="Objet" />
+              <input type="text" className="Form-Input" name="objet" placeholder="Objet" />
             </div>
             <div className="Form-Group">
               <label className="Form-Label" >Votre message :</label>
