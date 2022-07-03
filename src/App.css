@@ -206,6 +206,41 @@ p:hover {
   flex-direction: column;
 }
 
+.Form-Success {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  position: fixed;
+  z-index: 5000;
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation-name: open-express;
+  animation-duration: 1s;
+  top: 0px;
+  left: 0px;
+}
+
+@keyframes open-express {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.Form-Success-Exit:hover {
+  color: black;
+  cursor: pointer;
+}
+
 .Form-Label {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.3rem;

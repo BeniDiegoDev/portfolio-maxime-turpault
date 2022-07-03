@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 import { FaInstagram } from 'react-icons/fa';
@@ -7,10 +7,11 @@ import { ImFacebook2 } from 'react-icons/im';
 
 import SmartBar from '../components/SmartBar';
 import Menu from '../components/Menu';
-// import Contacts from '../components/Contacts'
 import BottomBar from '../components/BottomBar';
 
 function Contact() {
+
+  const [status, setStatus] = useState('');
 
   const form = useRef();
 
@@ -18,15 +19,34 @@ function Contact() {
     e.preventDefault();
 
     emailjs.sendForm('service_y9l5w4i', 'template_zw64o3s', form.current, 'oR8C9eyUmiYFgWCQt')
-      .then((result) => {
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+          e.target.reset();
+          setStatus('success');
+        },
+        (error) => {
           console.log(error.text);
-      });
+          setStatus('error');
+        });
   };
 
   return (
     <>
+      {status === 'success' ?
+        <div className="Form-Success" onClick={() => setStatus('')}>
+          <p>Envoyé avec succés !</p>
+            <p className='Form-Success-Exit'>Retour</p>
+        </div>
+        : status === 'error' ?
+          <div className="Form-Success" onClick={() => setStatus('')}>
+            <p>Echec de l'envoi</p>
+            <p className='Form-Success-Exit'>Réessayer</p>
+          </div>
+          :
+          <>
+          </>
+      }
       <SmartBar />
       <Menu />
       <div className="Contact">
@@ -40,37 +60,37 @@ function Contact() {
         </div>
       </div>
       <div className="Contact-Form">
-          <form ref={form} onSubmit={sendEmail}>
-            <div className="Form-Group">
-              <label className="Form-Label" >Prénom :</label>
-              <input type="text" className="Form-Input" name="firstname" placeholder="Prénom" />
-            </div>
-            <div className="Form-Group">
-              <label className="Form-Label" >Nom :</label>
-              <input type="text" className="Form-Input" name="lastname" placeholder="Nom" />
-            </div>
-            <div className="Form-Group">
-              <label className="Form-Label" >Adresse mail :</label>
-              <input type="email" className="Form-Input" name="email" placeholder="Adresse Mail" />
-            </div>
-            <div className="Form-Group">
-              <label className="Form-Label" >Numéro de téléphone :</label>
-              <input type="phone" className="Form-Input" name="phone" placeholder="Numéro de téléphone" />
-            </div>
-            <div className="Form-Group">
-              <label className="Form-Label" >Objet :</label>
-              <input type="text" className="Form-Input" name="objet" placeholder="Objet" />
-            </div>
-            <div className="Form-Group">
-              <label className="Form-Label" >Votre message :</label>
-              <textarea className="Form-Text" name="message" placeholder="Votre message de contact" />
-            </div>
-            <div className="Form-Button">
-              <button className="Button" type="submit">Envoyer</button>
-            </div>
-          </form>
+        <form ref={form} onSubmit={sendEmail}>
+
+          <div className="Form-Group">
+            <label className="Form-Label" >Prénom :</label>
+            <input type="text" className="Form-Input" name="firstname" placeholder="Prénom" required />
+          </div>
+          <div className="Form-Group">
+            <label className="Form-Label" >Nom :</label>
+            <input type="text" className="Form-Input" name="lastname" placeholder="Nom" required />
+          </div>
+          <div className="Form-Group">
+            <label className="Form-Label" >Adresse mail :</label>
+            <input type="email" className="Form-Input" name="email" placeholder="Adresse Mail" required />
+          </div>
+          <div className="Form-Group">
+            <label className="Form-Label" >Numéro de téléphone :</label>
+            <input type="phone" className="Form-Input" name="phone" placeholder="Numéro de téléphone" required />
+          </div>
+          <div className="Form-Group">
+            <label className="Form-Label" >Objet :</label>
+            <input type="text" className="Form-Input" name="objet" placeholder="Objet" required />
+          </div>
+          <div className="Form-Group">
+            <label className="Form-Label" >Votre message :</label>
+            <textarea className="Form-Text" name="message" placeholder="Votre message de contact" required />
+          </div>
+          <div className="Form-Button">
+            <button className="Button" type="submit">Envoyer</button>
+          </div>
+        </form>
       </div>
-      {/* <Contacts /> */}
       <BottomBar />
     </>
   );
