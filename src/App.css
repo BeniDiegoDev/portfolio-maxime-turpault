@@ -180,10 +180,9 @@ p:hover {
 }
 
 .Contact {
-  max-width: 80vw;
   margin-left: 240px;
   margin-right: 130px;
-  margin-top: 90px;
+  margin-top: 5vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -191,11 +190,80 @@ p:hover {
   flex-wrap: wrap;
 }
 
+.Contact-Form {
+  margin-left: 240px;
+  margin-right: 130px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Form-Group {
+  display: flex;
+  flex-direction: column;
+}
+
+.Form-Label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.Form-Input {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 5px;
+  min-width: 50vw;
+  max-width: 50vw;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.Form-Text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 5px;
+  min-height: 20vh;
+  min-width: 50vw;
+  max-width: 50vw;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.Form-Button {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.Button {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.Button:hover {
+  cursor: pointer;
+}
+
 .Contact-Gauche {
   min-width: 350px;
   max-width: 350px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
@@ -204,6 +272,7 @@ p:hover {
   max-width: 350px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   flex-wrap: wrap;
 }
 
@@ -480,7 +549,6 @@ p:hover {
   }
 
   .Contact {
-    max-width: 100vw;
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
@@ -496,6 +564,7 @@ p:hover {
     min-width: 80%;
     max-width: 80%;
     display: flex;
+    align-items: flex-start !important;
     flex-direction: column;
   }
 
@@ -503,8 +572,25 @@ p:hover {
     min-width: 80%;
     max-width: 80%;
     display: flex;
+    align-items: flex-start !important;
     flex-direction: column;
   }
+
+  .Contact-Form {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 50px;
+  }
+  
+  .Form-Input {
+    min-width: 80vw !important;
+    max-width: 80vw !important;
+  }
+  
+  .Form-Text {
+    min-width: 80vw !important;
+    max-width: 80vw !important;
+  } 
 
   .Bottom {
     position: fixed;
@@ -559,6 +645,26 @@ p:hover {
     margin: 2px;
   }
 
+}
+
+@media only screen and (max-width: 1070px) {
+  .Contact-Gauche {
+    align-items: center;
+  }
+
+  .Contact-Droite {
+    align-items: center;
+  }
+
+  .Form-Input {
+    min-width: 40vw;
+    max-width: 40vw;
+  }
+  
+  .Form-Text {
+    min-width: 40vw;
+    max-width: 40vw;
+  }
 }
 
 @media only screen and (min-width: 720px) {
