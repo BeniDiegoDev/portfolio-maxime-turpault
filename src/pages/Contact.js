@@ -34,14 +34,14 @@ function Contact() {
   return (
     <>
       {status === 'success' ?
-        <div className="Form-Success" onClick={() => setStatus('')}>
+        <div className="Form-Success">
           <p>Envoyé avec succés !</p>
-            <p className='Form-Success-Exit'>Retour</p>
+            <p className='Form-Success-Exit' onClick={() => setStatus('')}>Fermer</p>
         </div>
         : status === 'error' ?
-          <div className="Form-Success" onClick={() => setStatus('')}>
+          <div className="Form-Success">
             <p>Echec de l'envoi</p>
-            <p className='Form-Success-Exit'>Réessayer</p>
+            <p className='Form-Success-Exit' onClick={() => setStatus('')}>Réessayer</p>
           </div>
           :
           <>
@@ -61,7 +61,6 @@ function Contact() {
       </div>
       <div className="Contact-Form">
         <form ref={form} onSubmit={sendEmail}>
-
           <div className="Form-Group">
             <label className="Form-Label" >Prénom :</label>
             <input type="text" className="Form-Input" name="firstname" placeholder="Prénom" required />
@@ -72,7 +71,7 @@ function Contact() {
           </div>
           <div className="Form-Group">
             <label className="Form-Label" >Adresse mail :</label>
-            <input type="email" className="Form-Input" name="email" placeholder="Adresse Mail" required />
+            <input type="email" className="Form-Input" name="email" placeholder="Adresse mail" required />
           </div>
           <div className="Form-Group">
             <label className="Form-Label" >Numéro de téléphone :</label>
