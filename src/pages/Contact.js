@@ -9,6 +9,8 @@ import SmartBar from '../components/SmartBar';
 import Menu from '../components/Menu';
 import BottomBar from '../components/BottomBar';
 
+import { ImCross } from 'react-icons/im';
+
 function Contact() {
 
   const [status, setStatus] = useState('');
@@ -34,15 +36,23 @@ function Contact() {
   return (
     <>
       {status === 'success' ?
-        <div className="Form-Success">
-          <p>Envoyé avec succés !</p>
-            <p className='Form-Success-Exit' onClick={() => setStatus('')}>Fermer</p>
-        </div>
-        : status === 'error' ?
-          <div className="Form-Success">
-            <p>Echec de l'envoi</p>
-            <p className='Form-Success-Exit' onClick={() => setStatus('')}>Réessayer</p>
+        <>
+          <div>
+            <ImCross className='Form-Success-Exit' onClick={() => setStatus('')} />
           </div>
+          <div className="Form-Success">
+            <p>Envoyé avec succés !</p>
+          </div>
+        </>
+        : status === 'error' ?
+          <>
+            <div>
+              <ImCross className='Form-Success-Exit' onClick={() => setStatus('')} />
+            </div>
+            <div className="Form-Success">
+              <p>Echec de l'envoi</p>
+            </div>
+          </>
           :
           <>
           </>

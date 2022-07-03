@@ -207,8 +207,8 @@ p:hover {
 }
 
 .Form-Success {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
   position: fixed;
   z-index: 5000;
   min-width: 100vw;
@@ -234,6 +234,14 @@ p:hover {
   100% {
     opacity: 1;
   }
+}
+
+.Form-Success-Exit {
+  position: fixed;
+  z-index: 5500;
+  color: rgb(110, 110, 110);
+  top: 20px;
+  right: 20px;
 }
 
 .Form-Success-Exit:hover {
@@ -444,6 +452,43 @@ p:hover {
   width: 32%;
   max-height: 32%;
   margin: 2px;
+}
+
+.Pictures:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.BigPicture {
+  position: fixed;
+  z-index: 5000;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 1);
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.BigPictures {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.BigPictures-Exit {
+  position: fixed;
+  z-index: 5500;
+  color: rgb(110, 110, 110);
+  top: 20px;
+  right: 20px;
+}
+
+.BigPictures-Exit:hover {
+  color: black;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 720px) {
