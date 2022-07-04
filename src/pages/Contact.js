@@ -70,7 +70,8 @@ function Contact() {
         </div>
       </div>
       <div className="Contact-Form">
-        <form ref={form} onSubmit={sendEmail}>
+        <p className="Form-Info">Pour tous vos projets artistiques en studio ou en extérieur, n'hésitez pas à me contacter en remplissant ce formulaire :</p>
+        <form className="Formulaire" ref={form} onSubmit={sendEmail}>
           <div className="Form-Group">
             <label className="Form-Label" >Prénom :</label>
             <input type="text" className="Form-Input" name="firstname" placeholder="Prénom" required />

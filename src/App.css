@@ -176,7 +176,8 @@ p:hover {
 }
 
 .Presentation-Text {
-  width: 80%;
+  margin-top: 50px;
+  text-align: justify;
 }
 
 .Contact {
@@ -236,6 +237,10 @@ p:hover {
   }
 }
 
+.Formulaire {
+  margin: 0;
+}
+
 .Form-Success-Exit {
   position: fixed;
   z-index: 5500;
@@ -279,6 +284,15 @@ p:hover {
   border: 1px solid black;
   border-radius: 5px;
   padding: 5px;
+}
+
+.Form-Info {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 50px;
+  text-align: justify;
 }
 
 .Form-Button {
@@ -601,13 +615,15 @@ p:hover {
   .Presentation-Parcours {
     width: 80%;
     margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: justify;
   }
 
   .Presentation-Desc {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -615,7 +631,8 @@ p:hover {
   }
 
   .Presentation-Text {
-    margin-top: 0px;
+    margin-top: 30px;
+    margin-bottom: 0px;
     width: 80%;
   }
 
@@ -641,16 +658,16 @@ p:hover {
   }
 
   .Contact-Gauche {
-    min-width: 80%;
-    max-width: 80%;
+    min-width: 80vw;
+    max-width: 80vw;
     display: flex;
     align-items: flex-start !important;
     flex-direction: column;
   }
 
   .Contact-Droite {
-    min-width: 80%;
-    max-width: 80%;
+    min-width: 80vw;
+    max-width: 80vw;
     display: flex;
     align-items: flex-start !important;
     flex-direction: column;
@@ -661,16 +678,24 @@ p:hover {
     margin-right: 0px;
     padding-bottom: 50px;
   }
-  
+
+  .Form-Info {
+    width: 80vw;
+  }
+
+  .Formulaire {
+    width: 80vw;
+  }
+
   .Form-Input {
     min-width: 80vw !important;
     max-width: 80vw !important;
   }
-  
+
   .Form-Text {
     min-width: 80vw !important;
     max-width: 80vw !important;
-  } 
+  }
 
   .Bottom {
     position: fixed;
@@ -728,19 +753,11 @@ p:hover {
 }
 
 @media only screen and (max-width: 1070px) {
-  .Contact-Gauche {
-    align-items: center;
-  }
-
-  .Contact-Droite {
-    align-items: center;
-  }
-
   .Form-Input {
     min-width: 40vw;
     max-width: 40vw;
   }
-  
+
   .Form-Text {
     min-width: 40vw;
     max-width: 40vw;
