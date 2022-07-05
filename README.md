@@ -17,7 +17,7 @@ Ce projet a été construit en utilisant ces technologies :
 
 ## Features
 
-**📖 Simple Page**
+**📖 Multi Page**
 
 **🎨 Full CSS (Pas de bootstrap utilisé)**
 
