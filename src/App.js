@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import './App.css';
+import { Provider } from 'react-redux';
+import { createStore, combineReducers } from 'redux';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import './App.css';
 
 import LoadingScreen from "./pages/LoadingScreen";
 import Accueil from "./pages/Accueil"
@@ -12,17 +15,22 @@ import Paysages from "./pages/Paysages"
 import Portraits from "./pages/Portraits"
 import Contact from "./pages/Contact"
 
+import photos from './reducers/photos';
+
+const store = createStore(combineReducers({ photos }));
+
 function App() {
 
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000)
+    setTimeout(() => setLoading(false), 1500)
   }, [])
 
   return (
-    <>
-      {!loading ? (
+
+    <Provider store={store}>
+    {!loading ? (
         <Router>
           <Switch>
             <Route exact path="/" component={Accueil} />
@@ -36,7 +44,7 @@ function App() {
       ) : (
         <LoadingScreen />
       )}
-    </>
+    </Provider>
   );
 }
 
