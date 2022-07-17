@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
 
 import SmartBar from '../components/SmartBar';
@@ -8,26 +8,29 @@ import BottomBar from '../components/BottomBar';
 
 function Accueil(props) {
 
-  const [photos, setPhotos] = useState([])
-
   useEffect(() => {
     async function loadData() {
       var photoBdd = await fetch(`https://backofficemaxime.herokuapp.com/profil/recupphoto`);
       var photo = await photoBdd.json();
       props.addPhoto(photo.photos);
-      setPhotos(photo.photos);
     }
     loadData();
+    async function loadPresentation() {
+      var presetationBdd = await fetch(`https://backofficemaxime.herokuapp.com/profil/recuppresentation`);
+      var presentation = await presetationBdd.json();
+      props.addPresentation(presentation.presentation);
+    }
+    loadPresentation();
   }, []);
 
-  let photoAleatoire = photos[Math.floor(Math.random(photos.length) * photos.length)]
+  let photoAleatoire = props.photos[Math.floor(Math.random(props.photos.length) * props.photos.length)]
 
   return (
     <>
       <SmartBar />
       <Menu />
       <div className="Accueil">
-        {photoAleatoire == undefined ?
+        {photoAleatoire === undefined ?
           <>
           </>
           :
@@ -50,6 +53,12 @@ function mapDispatchToProps(dispatch) {
       dispatch({
         type: 'addPhoto',
         photos
+      })
+    },
+    addPresentation: function (presentation) {
+      dispatch({
+        type: 'addPresentation',
+        presentation
       })
     }
   }

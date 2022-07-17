@@ -1,17 +1,12 @@
 import React from 'react'
+import { connect } from 'react-redux';
 
 import SmartBar from '../components/SmartBar';
 import Menu from '../components/Menu';
 import Contacts from '../components/Contacts'
 import BottomBar from '../components/BottomBar';
-import Photos from '../components/Photos';
 
-function Presentation() {
-
-  let photoPresentation = Photos.filter(item => item.categorie === 'Presentation').map((item, i) => (
-    <img className="Presentation-Pictures" key={i} src={item.miniatures} alt={item.name} />
-  )
-  )
+function Presentation(props) {
 
   return (
     <>
@@ -19,17 +14,14 @@ function Presentation() {
       <Menu />
       <div className='Presentation'>
         <div className='Presentation-Picture'>
-          {photoPresentation}
+          <img className="Presentation-Pictures" src={props.presentation[0].photo} alt="Maxime Turpault" />
           <p className='Presentation-Parcours'>
-            Je suis Maxime Turpault<br />
-            Photographe et retoucheur en freelance, basé en Ile de France<br />
-            Étudiant à l'école des Gobelins en Bachelor photo et vidéo<br />
+            {props.presentation[0].presentation}
             </p>
         </div>
         <div className='Presentation-Desc'>
           <p className='Presentation-Text'>
-            Je suis passionné d'images depuis toujours, je vous invites à découvrir mon travail sur mon portfolio.<br />
-            Mes photographies ont un objectif artistique, ainsi que tous mes projets concernant l'image.
+            {props.presentation[0].description}
           </p>
         </div>
       </div>
@@ -39,4 +31,11 @@ function Presentation() {
   );
 }
 
-export default Presentation;
+function mapStateToProps(state) {
+  return { presentation: state.presentation }
+}
+
+export default connect(
+  mapStateToProps,
+  null
+)(Presentation);

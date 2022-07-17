@@ -16,8 +16,9 @@ import Portraits from "./pages/Portraits"
 import Contact from "./pages/Contact"
 
 import photos from './reducers/photos';
+import presentation from './reducers/presentation';
 
-const store = createStore(combineReducers({ photos }));
+const store = createStore(combineReducers({ photos, presentation }));
 
 function App() {
 
