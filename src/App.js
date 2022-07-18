@@ -17,8 +17,9 @@ import Contact from "./pages/Contact"
 
 import photos from './reducers/photos';
 import presentation from './reducers/presentation';
+import profil from './reducers/profil';
 
-const store = createStore(combineReducers({ photos, presentation }));
+const store = createStore(combineReducers({ photos, presentation, profil }));
 
 function App() {
 

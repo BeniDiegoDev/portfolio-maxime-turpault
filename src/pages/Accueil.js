@@ -9,18 +9,24 @@ import BottomBar from '../components/BottomBar';
 function Accueil(props) {
 
   useEffect(() => {
-    async function loadData() {
+    async function loadPhotos() {
       var photoBdd = await fetch(`https://backofficemaxime.herokuapp.com/profil/recupphoto`);
       var photo = await photoBdd.json();
       props.addPhoto(photo.photos);
     }
-    loadData();
+    loadPhotos();
     async function loadPresentation() {
       var presetationBdd = await fetch(`https://backofficemaxime.herokuapp.com/profil/recuppresentation`);
       var presentation = await presetationBdd.json();
       props.addPresentation(presentation.presentation);
     }
     loadPresentation();
+    async function loadProfil() {
+      var profilBdd = await fetch(`https://backofficemaxime.herokuapp.com/profil/recupprofil`);
+      var profil = await profilBdd.json();
+      props.addProfil(profil.profil);
+    }
+    loadProfil();
   }, []);
 
   let photoAleatoire = props.photos[Math.floor(Math.random(props.photos.length) * props.photos.length)]
@@ -59,6 +65,12 @@ function mapDispatchToProps(dispatch) {
       dispatch({
         type: 'addPresentation',
         presentation
+      })
+    },
+    addProfil: function (profil) {
+      dispatch({
+        type: 'addProfil',
+        profil
       })
     }
   }

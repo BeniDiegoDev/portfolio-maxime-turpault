@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react';
+import { connect } from 'react-redux';
+
 import emailjs from '@emailjs/browser';
 
 import { FaInstagram } from 'react-icons/fa';
@@ -11,7 +13,7 @@ import BottomBar from '../components/BottomBar';
 
 import { ImCross } from 'react-icons/im';
 
-function Contact() {
+function Contact(props) {
 
   const [status, setStatus] = useState('');
 
@@ -61,12 +63,12 @@ function Contact() {
       <Menu />
       <div className="Contact">
         <div className="Contact-Gauche">
-          <h3><HiPhone style={{ marginRight: '5px' }} /> Téléphone : <a className="Contacts" href="tel:+33770102320">+33770102320</a></h3>
-          <h3><HiOutlineMail style={{ marginRight: '5px' }} /> Email : <a className="Contacts" href="mailto:maxime.turpault92@gmail.com?subject=Contact depuis votre Portfolio 💻 - Prénom Nom - Objet de votre mail&body=N'oubliez pas de mettre votre message ⭐">maxime.turpault92@gmail.com</a></h3>
+          <h3><HiPhone style={{ marginRight: '5px' }} /> Téléphone : <a className="Contacts" href={"tel:"+props.profil[0].phoneNumber}>{props.profil[0].phoneNumber}</a></h3>
+          <h3><HiOutlineMail style={{ marginRight: '5px' }} /> Email : <a className="Contacts" href={"mailto:"+props.profil[0].emailPro+"?subject=Contact depuis votre Portfolio 💻 - Prénom Nom - Objet de votre mail&body=N'oubliez pas de mettre votre message ⭐"}>{props.profil[0].emailPro}</a></h3>
         </div>
         <div className="Contact-Droite">
-          <h3><FaInstagram style={{ marginRight: '5px' }} /> Instagram : <a className="Contacts" href='https://www.instagram.com/maximeturpault/' target="_blank" rel="noreferrer">/maximeturpault</a></h3>
-          <h3><ImFacebook2 style={{ marginRight: '5px' }} /> Facebook : <a className="Contacts" href='https://www.facebook.com/profile.php?id=100012629315440' target="_blank" rel="noreferrer">Maxime Turpault</a></h3>
+          <h3><FaInstagram style={{ marginRight: '5px' }} /> Instagram : <a className="Contacts" href={props.profil[0].instagram} target="_blank" rel="noreferrer">/maximeturpault</a></h3>
+          <h3><ImFacebook2 style={{ marginRight: '5px' }} /> Facebook : <a className="Contacts" href={props.profil[0].facebook} target="_blank" rel="noreferrer">Maxime Turpault</a></h3>
         </div>
       </div>
       <div className="Contact-Form">
@@ -106,4 +108,11 @@ function Contact() {
   );
 }
 
-export default Contact;
+function mapStateToProps(state) {
+  return { profil: state.profil }
+}
+
+export default connect(
+  mapStateToProps,
+  null
+)(Contact);
