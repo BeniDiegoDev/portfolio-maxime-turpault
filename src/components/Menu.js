@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
+
 import { Link } from 'react-router-dom';
 
-import Categories from "./Categories";
-
-function Menu() {
+function Menu(props) {
 
     return (
         <div>
@@ -14,13 +14,35 @@ function Menu() {
                 <Link className="Name" to="/"><img className='Logo' src='/logomt.png' alt='logo' /></Link>
             </div>
             <div className="Gauche">
-                {Categories.map((item, i) => (
-                    <Link className="Item-Menu" key={i} to={item.link}>{item.name}</Link>
+                <Link className="Item-Menu" to="/">Accueil</Link>
+                <Link className="Item-Menu" to="/presentation">Présentation</Link>
+                {props.categorie.map((item, i) => (
+                    <Link className="Item-Menu" key={i} to="/galerie" onClick={() => (console.log(item), props.selectedCategorie(item))}>{item}</Link>
                 )
                 )}
+                <Link className="Item-Menu" to="/contact">Contact</Link>
             </div>
         </div>
     );
 }
 
-export default Menu;
+function mapStateToProps(state) {
+    return { categorie: state.categorie }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        selectedCategorie: function (selection) {
+            dispatch({
+                type: 'selectedCategorie',
+                selection
+            })
+        },
+    }
+}
+
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Menu);

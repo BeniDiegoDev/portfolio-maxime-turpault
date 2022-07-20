@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
+
 import { Link } from 'react-router-dom';
 
-import Categories from "./Categories";
-
-function SmartBar() {
+function SmartBar(props) {
 
     const [showMenu, setShowMenu] = useState(false)
 
@@ -14,10 +14,14 @@ function SmartBar() {
             </div>
             {showMenu ?
                 <div className="Top-Smart">
-                    {Categories.map((item, i) => (
-                        <Link className="Item-Smart" key={i} to={item.link}>{item.name}</Link>
+                    <Link className="Item-Menu" to="/">Accueil</Link>
+                    <Link className="Item-Menu" to="/presentation">Présentation</Link>
+                    {props.categorie.map((item, i) => (
+                        <Link className="Item-Menu" key={i} to="/galerie" onClick={() => (console.log(item))}>{item}</Link>
                     )
                     )}
+                    <Link className="Item-Menu" to="/contact">Contact</Link>
+
                 </div>
                 :
                 <>
@@ -31,4 +35,11 @@ function SmartBar() {
     );
 }
 
-export default SmartBar;
+function mapStateToProps(state) {
+    return { categorie: state.categorie }
+}
+
+export default connect(
+    mapStateToProps,
+    null
+)(SmartBar);

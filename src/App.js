@@ -10,16 +10,16 @@ import './App.css';
 import LoadingScreen from "./pages/LoadingScreen";
 import Accueil from "./pages/Accueil"
 import Presentation from "./pages/Presentation"
-import Architectures from "./pages/Architectures"
-import Paysages from "./pages/Paysages"
-import Portraits from "./pages/Portraits"
+import Galerie from "./pages/Galerie"
 import Contact from "./pages/Contact"
 
 import photos from './reducers/photos';
 import presentation from './reducers/presentation';
 import profil from './reducers/profil';
+import categorie from "./reducers/categorie";
+import selection from "./reducers/selection";
 
-const store = createStore(combineReducers({ photos, presentation, profil }));
+const store = createStore(combineReducers({ photos, presentation, profil, categorie, selection }));
 
 function App() {
 
@@ -37,9 +37,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Accueil} />
             <Route path="/presentation" component={Presentation} />
-            <Route path="/architectures" component={Architectures} />
-            <Route path="/paysages" component={Paysages} />
-            <Route path="/portraits" component={Portraits} />
+            <Route path="/galerie" component={Galerie} />
             <Route path="/contact" component={Contact} />
           </Switch>
         </Router>

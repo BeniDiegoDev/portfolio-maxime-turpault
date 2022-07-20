@@ -27,14 +27,20 @@ function Accueil(props) {
       props.addProfil(profil.profil);
     }
     loadProfil();
+    async function loadCategorie() {
+      var categorieBdd = await fetch(`https://backofficemaxime.herokuapp.com/profil/recupcategorie`);
+      var categorie = await categorieBdd.json();
+      props.addCategorie(categorie.categorie);
+    }
+    loadCategorie();
   }, []);
-
+  
   let photoAleatoire = props.photos[Math.floor(Math.random(props.photos.length) * props.photos.length)]
 
   return (
     <>
       <SmartBar />
-      <Menu />
+      <Menu/>
       <div className="Accueil">
         {photoAleatoire === undefined ?
           <>
@@ -71,6 +77,12 @@ function mapDispatchToProps(dispatch) {
       dispatch({
         type: 'addProfil',
         profil
+      })
+    },
+    addCategorie: function (categorie) {
+      dispatch({
+        type: 'addCategorie',
+        categorie
       })
     }
   }
