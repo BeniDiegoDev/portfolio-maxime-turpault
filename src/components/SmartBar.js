@@ -17,7 +17,7 @@ function SmartBar(props) {
                     <Link className="Item-Menu" to="/">Accueil</Link>
                     <Link className="Item-Menu" to="/presentation">Présentation</Link>
                     {props.categorie.map((item, i) => (
-                        <Link className="Item-Menu" key={i} to="/galerie" onClick={() => (console.log(item))}>{item}</Link>
+                        <Link className="Item-Menu" key={i} to="/galerie" onClick={() => (console.log(item), props.selectedCategorie(item))}>{item}</Link>
                     )
                     )}
                     <Link className="Item-Menu" to="/contact">Contact</Link>
@@ -39,7 +39,18 @@ function mapStateToProps(state) {
     return { categorie: state.categorie }
 }
 
+function mapDispatchToProps(dispatch) {
+    return {
+        selectedCategorie: function (selection) {
+            dispatch({
+                type: 'selectedCategorie',
+                selection
+            })
+        },
+    }
+}
+
 export default connect(
     mapStateToProps,
-    null
+    mapDispatchToProps
 )(SmartBar);

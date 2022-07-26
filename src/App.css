@@ -471,6 +471,7 @@ p:hover {
 .Pictures:hover {
   cursor: pointer;
   opacity: 0.8;
+  z-index: 50;
 }
 
 .BigPicture {
