@@ -403,6 +403,7 @@ p:hover {
   position: fixed;
   bottom: 0px;
   background-color: white;
+  z-index: 5000;
 }
 
 .Bottom-Bar {
@@ -722,6 +723,7 @@ p:hover {
     text-align: center;
     background-color: white;
     padding-top: 10px;
+    z-index: 5000;
   }
 
   .Item-Smart {
