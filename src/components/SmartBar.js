@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { Link } from 'react-router-dom';
 
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+
 function SmartBar(props) {
 
     const [showMenu, setShowMenu] = useState(false)
@@ -11,16 +13,21 @@ function SmartBar(props) {
         <div className="Smart-Bar">
             <div className="Top-Menu">
                 <h2 onClick={() => (setShowMenu(!showMenu))}><span className="Text-Menu">Menu</span></h2>
+                {!showMenu ?
+                    <AiOutlineMenu class='Margin-Menu' onClick={() => (setShowMenu(!showMenu))}/>
+                    :
+                    <AiOutlineClose class='Margin-Menu-Close' onClick={() => (setShowMenu(!showMenu))}/>
+                }
             </div>
             {showMenu ?
                 <div className="Top-Smart">
-                    <Link className="Item-Menu" to="/">Accueil</Link>
-                    <Link className="Item-Menu" to="/presentation">Présentation</Link>
+                    <Link className="Item-Menu" to="/" onClick={() => (setShowMenu(false))}>Accueil</Link>
+                    <Link className="Item-Menu" to="/presentation" onClick={() => (setShowMenu(false))}>Présentation</Link>
                     {props.categorie.map((item, i) => (
-                        <Link className="Item-Menu" key={i} to="/galerie" onClick={() => (console.log(item), props.selectedCategorie(item))}>{item}</Link>
+                        <Link className="Item-Menu" key={i} to="/galerie" onClick={() => (setShowMenu(false), props.selectedCategorie(item))}>{item}</Link>
                     )
                     )}
-                    <Link className="Item-Menu" to="/contact">Contact</Link>
+                    <Link className="Item-Menu" to="/contact" onClick={() => (setShowMenu(false))}>Contact</Link>
 
                 </div>
                 :
@@ -28,8 +35,8 @@ function SmartBar(props) {
                 </>
             }
             <div className="Mark-Smart">
-                <Link className="Smart-Name" to="/">Maxime Turpault</Link>
-                <Link className="Smart-Name" to="/"><img className='Logo' src='/logomt.png' alt='logo' /></Link>
+                <Link className="Smart-Name" to="/" onClick={() => (setShowMenu(false))}><span>Maxime Turpault</span></Link>
+                <Link className="Smart-Name" to="/" onClick={() => (setShowMenu(false))}><img className='Logo' src='/logomt.png' alt='logo' /></Link>
             </div>
         </div>
     );

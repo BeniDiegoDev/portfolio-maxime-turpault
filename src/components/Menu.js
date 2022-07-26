@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ function Menu(props) {
                 <Link className="Item-Menu" to="/">Accueil</Link>
                 <Link className="Item-Menu" to="/presentation">Présentation</Link>
                 {props.categorie.map((item, i) => (
-                    <Link className="Item-Menu" key={i} to="/galerie" onClick={() => (console.log(item), props.selectedCategorie(item))}>{item}</Link>
+                    <Link className="Item-Menu" key={i} to="/galerie" onClick={() => (props.selectedCategorie(item))}>{item}</Link>
                 )
                 )}
                 <Link className="Item-Menu" to="/contact">Contact</Link>

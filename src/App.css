@@ -522,11 +522,27 @@ p:hover {
     background-color: white;
     padding-bottom: 10px;
     padding-top: 10px;
+    z-index: 5000;
   }
 
   .Top-Menu {
-    text-align: center;
     min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Margin-Menu {
+    position: fixed;
+    cursor: pointer;
+    right: 1.5rem;
+  }
+
+  .Margin-Menu-Close {
+    position: fixed;
+    cursor: pointer;
+    right: 1.5rem;
   }
 
   .Text-Menu {
