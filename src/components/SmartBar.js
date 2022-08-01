@@ -13,10 +13,10 @@ function SmartBar(props) {
         <div className="Smart-Bar">
             <div className="Top-Menu">
                 <h2 onClick={() => (setShowMenu(!showMenu))}><span className="Text-Menu">Menu</span></h2>
-                {!showMenu ?
-                    <AiOutlineMenu class='Margin-Menu' onClick={() => (setShowMenu(!showMenu))}/>
-                    :
+                {showMenu ?
                     <AiOutlineClose class='Margin-Menu-Close' onClick={() => (setShowMenu(!showMenu))}/>
+                    :
+                    <AiOutlineMenu class='Margin-Menu' onClick={() => (setShowMenu(!showMenu))}/>
                 }
             </div>
             {showMenu ?
